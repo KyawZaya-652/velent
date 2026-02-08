@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hey My Love - Valentine's Gift</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <div id="landing-page" class="screen active">
+            <h1>Hey my love</h1>
+            <p>I HAVE A GIFT FOR YOU</p>
+            <div class="gift-box" onclick="nextScreen('question-page')">
+                🎁
+                <span>TAP TO OPEN</span>
+            </div>
+        </div>
+
+        <div id="question-page" class="screen">
+            <h2>Will you be my valentine?</h2>
+            <div class="character-box">🧸</div>
+            <div class="btn-group">
+                <button class="yes-btn" onclick="nextScreen('gift-selection')">YES</button>
+                <button class="no-btn" onmouseover="moveNoBtn(this)" onclick="alert('Try again! 😉')">NO</button>
+            </div>
+        </div>
+
+        <div id="gift-selection" class="screen">
+            <h2>Choose a gift</h2>
+            <div class="icon-menu">
+                <div class="icon-item" onclick="showGift('letter')">✉️</div>
+                <div class="icon-item" onclick="showGift('photos')">📷</div>
+                <div class="icon-item" onclick="showGift('voucher')">🎟️</div>
+                <div class="icon-item" onclick="showGift('timeline')">🕒</div>
+            </div>
+            <button class="back-link" onclick="nextScreen('landing-page')">GO BACK</button>
+        </div>
+
+        <div id="gift-content" class="screen">
+            <h2 id="content-title"></h2>
+            <div id="content-body" class="scroll-content"></div>
+            <button class="back-link" onclick="nextScreen('gift-selection')">GO BACK</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
