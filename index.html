@@ -1,48 +1,46 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hey My Love - Valentine's Gift</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="app-container">
-        <div id="landing-page" class="screen active">
-            <h1>Hey my love</h1>
-            <p>I HAVE A GIFT FOR YOU</p>
-            <div class="gift-box" onclick="nextScreen('question-page')">
-                🎁
-                <span>TAP TO OPEN</span>
-            </div>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Valentine Letter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aldrich&family=Pixelify+Sans:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Envelope Screen -->
+    <div id="envelope-container">
+      <img src="envelope.png" alt="Envelope" id="envelope" />
+      <p>♡ Letter for You ♡</p>
+    </div>
+
+    <!-- Letter Screen -->
+    <div id="letter-container">
+      <div class="letter-window">
+        <h1 id="letter-title">Happy Valentine Day Fri</h1>
+
+        <img src="cat_heart.gif" class="cat" id="letter-cat" />
+
+        <div class="buttons" id="letter-buttons">
+          <img src="yes.png" class="btn yes-btn" alt="Yes" />
+
+          <div class="no-wrapper">
+            <img src="no.png" class="btn no-btn" alt="No" />
+          </div>
         </div>
 
-        <div id="question-page" class="screen">
-            <h2>Will you be my valentine?</h2>
-            <div class="character-box">🧸</div>
-            <div class="btn-group">
-                <button class="yes-btn" onclick="nextScreen('gift-selection')">YES</button>
-                <button class="no-btn" onmouseover="moveNoBtn(this)" onclick="alert('Try again! 😉')">NO</button>
-            </div>
-        </div>
-
-        <div id="gift-selection" class="screen">
-            <h2>Choose a gift</h2>
-            <div class="icon-menu">
-                <div class="icon-item" onclick="showGift('letter')">✉️</div>
-                <div class="icon-item" onclick="showGift('photos')">📷</div>
-                <div class="icon-item" onclick="showGift('voucher')">🎟️</div>
-                <div class="icon-item" onclick="showGift('timeline')">🕒</div>
-            </div>
-            <button class="back-link" onclick="nextScreen('landing-page')">GO BACK</button>
-        </div>
-
-        <div id="gift-content" class="screen">
-            <h2 id="content-title"></h2>
-            <div id="content-body" class="scroll-content"></div>
-            <button class="back-link" onclick="nextScreen('gift-selection')">GO BACK</button>
-        </div>
+        <p id="final-text" class="final-text" style="display: none">
+          <strong>Valentine Day ကစပြီး</strong> ချစ်ရတဲ့ တန်ဖိုးထားရသူနဲ့ ဆုံတွေ့ပါစေ
+        </p>
+      </div>
     </div>
     <script src="script.js"></script>
-</body>
-</html> 
+  </body>
+</html>
